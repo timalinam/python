@@ -1,20 +1,34 @@
+print('Вас приветствует SuperGame')
+
 gamer = {'name': input('Как вас зовут?\n'),
          'age': int(input('Сколько тебе лет?\n')),
-         'sex': '',
-         'pet_name': '',
+         'sex': input('Введите ваш пол\n'),
+         'pet_name': input('Как зовут вашего питомца?\n'),
+         'love_play': input('Любите ли вы играть? (да/нет)\n'),
          }
 
-if gamer['age'] < 18:
-    if gamer['name'] == 'Вася':
-        print(gamer['name'], 'тубу нельзя играть, потому что ты Вася и молодой')
-    else:
-        print('Тебе нельзя играть')
-elif gamer['name'] == 'Петя':
-    print('Ты плохой')
+if gamer['love_play'] == 'да':
+    gamer['love_play'] = True
 else:
-    print('Добро пожаловать в Игру')
+    gamer['love_play'] = False
 
-print('Я могу сосчитать твой возраст')
+if gamer['age'] < 18:
+    print('Тебе нельзя играть, потому что тебе меньше 18ти лет.')
+elif gamer['age'] > 90:
+    answer = input('Для вас это может быть утомительно, вы уверены, что хотите играть?(да\нет)')
+    if answer = 'нет':
+        print('До свидания,', gamer['name'])
+    else:
+        answer = input('Вы точно уверены, что хотите играть?(да\нет)')
+        if answer = 'нет':
+            print('До свидания,', gamer['name'])
+        else:
+            print('Хорошо, давайте начнем игру!')
+
+
+if 90 >= gamer['age'] > 18:
+
+    print('Я могу сосчитать твой возраст')
 
 i = 0
 while i <= gamer['age']:
