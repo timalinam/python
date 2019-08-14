@@ -15,37 +15,21 @@ else:
 if gamer['age'] < 18:
     print('Тебе нельзя играть, потому что тебе меньше 18ти лет.')
 elif gamer['age'] > 90:
-    answer = input('Для вас это может быть утомительно, вы уверены, что хотите играть?(да\нет)')
-    if answer = 'нет':
+    answer = input('Для вас это может быть утомительно, вы уверены, что хотите играть?(да\нет)\n')
+    if answer == 'нет':
         print('До свидания,', gamer['name'])
     else:
-        answer = input('Вы точно уверены, что хотите играть?(да\нет)')
-        if answer = 'нет':
+        answer = input('Вы точно уверены, что хотите играть?(да\нет)\n')
+        if answer == 'нет':
             print('До свидания,', gamer['name'])
         else:
             print('Хорошо, давайте начнем игру!')
 
+if 90 >= gamer['age'] >= 18:
+    print('Я выведу все буквы, которых нет в твоем имени')
+    alphabet = 'абвгдеёжзиклмнопрстуфхцчшщъыьэюя'
+    for char in alphabet:
+        if char not in gamer['name'].lower():
+            print(char)
 
-if 90 >= gamer['age'] > 18:
-
-    print('Я могу сосчитать твой возраст')
-
-i = 0
-while i <= gamer['age']:
-    print(i)
-    i += 1
-
-    if i > 22:
-        print('замучился считать')
-        break
-else:
-    print('Сработал else в цикле')
-
-print('А еще я могу произнести имя по буквам')
-
-i = 0
-for char in gamer['name']:
-    i += 1
-    if i == 3:
-        continue
-    print(char)
+print('Игра завершена!')
