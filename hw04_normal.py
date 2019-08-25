@@ -86,7 +86,6 @@ print(our_list)
 
 str_pattern = r'[a-z]{2}[A-Z]+[A-Z]{2}'
 temp = re.findall(str_pattern, line_2)
-temp2 = []
 temp2 = [itm[2:-2] for itm in temp]
 print(temp2)
 

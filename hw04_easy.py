@@ -27,4 +27,4 @@ print(list_3)
 
 list_1 = [12, 3, 4, 5, -12, -2, -3, 9, 15]
 list_2 = [itm for itm in list_1 if not itm % 3 and itm % 4 and itm > 0]
-print(f'Первый список {list_1}\nВторой список{list_2}')
+print(f'Первый список {list_1}\nВторой список {list_2}')
